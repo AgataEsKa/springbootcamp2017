@@ -6,8 +6,14 @@
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 
+    <!--dla metod statycznych-->
+    <bean id="pollution" class="pl.kodolamacz.spring.Car" factory-method="produceStaticPollution"/>
+
+    <!--dla metod niestatycznych-->
+    <bean id="pollution2" factory-bean="car" factory-method="producePollution"/>
+
     <bean id="car" class="pl.kodolamacz.spring.Car" >
-        <constructor-arg value="Mercedes"/>
+        <constructor-arg value="Mercedes" />
     </bean>
 
     <!--wstrzyknięcie koła-->

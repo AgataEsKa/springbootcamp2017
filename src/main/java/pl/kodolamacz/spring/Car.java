@@ -54,4 +54,12 @@ public class Car {
     public String toString() {
         return name;
     }
+
+    public static Pollution produceStaticPollution() {
+        return new Pollution();
+    }
+
+    public Pollution producePollution() {
+        return new Pollution();
+    }
 }
