@@ -13,7 +13,9 @@ public class Car {
 
     private Pattern pattern;
 
-    public Car(){}
+    public Car(){
+        System.out.println("W konstruktorze: " + wheel);
+    }
 
     public Car(Wheel wheel) {
         this.wheel = wheel;
@@ -22,6 +24,10 @@ public class Car {
     public Car(String carName) {
         this.name = carName;
         this.wheel = new Wheel();
+    }
+
+    public void postConstruct() {
+        System.out.println("postConstruct" + wheel);
     }
 
     //    wymagane public, void i bez argumentów
