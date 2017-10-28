@@ -12,8 +12,9 @@ public class Aplication {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("context.xml");
 
+        Car car = context.getBean(Car.class);
 //        Car car = (Car) context.getBean("car"); // ale lepiej:
-        Car car = context.getBean("car", Car.class);
+        Car carDuplikaty = context.getBean("car", Car.class);
         Car car2 = context.getBean("car2", Car.class);
         Car car3 = context.getBean("car3", Car.class);
         System.out.println(car.toString());

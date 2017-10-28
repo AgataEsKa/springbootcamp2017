@@ -17,7 +17,8 @@
     <!--dla metod niestatycznych-->
     <bean id="pollution2" factory-bean="car" factory-method="producePollution"/>
 
-    <bean id="car" class="pl.kodolamacz.spring.Car" >
+    <!--w przypadku braku unikalności można nadać primary aby wymusić pobranie beana-->
+    <bean id="car" class="pl.kodolamacz.spring.Car" primary="true">
         <constructor-arg value="${car.name}" />
     </bean>
 
