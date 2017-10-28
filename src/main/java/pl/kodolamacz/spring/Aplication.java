@@ -8,19 +8,22 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Aplication {
 
     public static void main(String[] args) {
+
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("context.xml");
 
-//        Car bean = context.getBean(Car.class); // tutaj będzie błąd braku unikalności Beana Car
-        Car bean = context.getBean("car", Car.class);
-        System.out.println(bean.toString());
+//        Car car = (Car) context.getBean("car"); // ale lepiej:
+        Car car = context.getBean("car", Car.class);
+        Car car2 = context.getBean("car2", Car.class);
+        System.out.println(car.toString());
+        System.out.println(car2.toString());
 
         Wheel bean2 = context.getBean(Wheel.class);
         System.out.println(bean2.toString());
 
-        System.out.println("bean.getWheel()=" + bean.getWheel());
+        System.out.println("bean.getWheel()=" + car.getWheel());
 
-        System.out.println("Wheel1 = " + bean2 + ", Wheel2 = " + bean.getWheel());
+        System.out.println("Wheel1 = " + bean2 + ", Wheel2 = " + car.getWheel());
 
     }
 }

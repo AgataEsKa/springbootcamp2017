@@ -10,7 +10,7 @@
     </bean>
 
     <bean id="car2" class="pl.kodolamacz.spring.Car" >
-        <constructor-arg ref="wheel" />
+        <property name="wheel" ref="wheel" />
     </bean>
 
     <bean id="wheel" class="pl.kodolamacz.spring.Wheel" />

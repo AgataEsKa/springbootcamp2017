@@ -9,6 +9,8 @@ public class Car {
 
     private String name;
 
+    public Car(){}
+
     public Car(Wheel wheel) {
         this.wheel = wheel;
     }
