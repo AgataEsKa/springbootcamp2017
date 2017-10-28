@@ -7,6 +7,8 @@
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
 
+    <import resource="classpath:zadanie1.xml"/>
+
     <context:property-placeholder location="params.properties"
                                   file-encoding="UTF-8"
                                   ignore-unresolvable="true"/>
