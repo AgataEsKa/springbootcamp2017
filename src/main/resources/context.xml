@@ -1,6 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
@@ -9,13 +10,31 @@
         <constructor-arg value="Mercedes"/>
     </bean>
 
+    <!--wstrzyknięcie koła-->
     <bean id="car2" class="pl.kodolamacz.spring.Car" >
         <property name="wheel" ref="wheel" />
     </bean>
 
+    <!--typ prosty-->
     <bean id="car3" class="pl.kodolamacz.spring.Car" >
-        <property name="wheel" ref="wheel" />
+        <property name="name" value="Nazwa Car" />
     </bean>
+
+    <!--zastosowanie konwersji-->
+    <bean id="car7" class="pl.kodolamacz.spring.Car" >
+        <property name="pattern" value="a+" />
+    </bean>
+
+    <!-- Korzystanie z przestrzeni p (jako wrzucanie propertisów (settery) -->
+    <bean id="car4" class="pl.kodolamacz.spring.Car"
+        p:wheel-ref="wheel" />
+
+    <!-- Korzystanie z przestrzeni c (jako wykorzystanie constructora -->
+    <bean id="car5" class="pl.kodolamacz.spring.Car"
+          c:_0-ref="wheel" />
+
+    <bean id="car6" class="pl.kodolamacz.spring.Car"
+          c:wheel-ref="wheel" />
 
     <bean id="wheel" class="pl.kodolamacz.spring.Wheel" scope="prototype" />
 
