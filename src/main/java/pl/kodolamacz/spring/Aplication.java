@@ -28,5 +28,7 @@ public class Aplication {
 
         System.out.println("Wheel1 = " + bean2 + ", Wheel2 = " + car.getWheel());
 
+        context.close();
+
     }
 }

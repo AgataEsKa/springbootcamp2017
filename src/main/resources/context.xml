@@ -11,12 +11,12 @@
     </bean>
 
     <!--wstrzyknięcie koła-->
-    <bean id="car2" class="pl.kodolamacz.spring.Car" >
+    <bean id="car2" class="pl.kodolamacz.spring.Car" init-method="init">
         <property name="wheel" ref="wheel" />
     </bean>
 
     <!--typ prosty-->
-    <bean id="car3" class="pl.kodolamacz.spring.Car" >
+    <bean id="car3" class="pl.kodolamacz.spring.Car" destroy-method="destroy">
         <property name="name" value="Nazwa Car" />
     </bean>
 

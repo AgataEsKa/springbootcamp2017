@@ -24,6 +24,16 @@ public class Car {
         this.wheel = new Wheel();
     }
 
+    //    wymagane public, void i bez argumentów
+    public void init(){
+        System.out.println("START CAR");
+    }
+
+    // te same restrykcje
+    public void destroy() {
+        System.out.println("STOP CAR");
+    }
+
     public void setName(String name) {
         this.name = name;
     }
