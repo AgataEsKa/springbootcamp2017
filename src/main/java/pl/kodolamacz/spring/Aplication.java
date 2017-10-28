@@ -15,8 +15,11 @@ public class Aplication {
 //        Car car = (Car) context.getBean("car"); // ale lepiej:
         Car car = context.getBean("car", Car.class);
         Car car2 = context.getBean("car2", Car.class);
+        Car car3 = context.getBean("car3", Car.class);
         System.out.println(car.toString());
         System.out.println(car2.toString());
+
+        System.out.println("car2.getWheel() == car3.getWheel() -> " + (car2.getWheel() == car3.getWheel()));
 
         Wheel bean2 = context.getBean(Wheel.class);
         System.out.println(bean2.toString());

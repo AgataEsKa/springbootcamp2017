@@ -13,7 +13,11 @@
         <property name="wheel" ref="wheel" />
     </bean>
 
-    <bean id="wheel" class="pl.kodolamacz.spring.Wheel" />
+    <bean id="car3" class="pl.kodolamacz.spring.Car" >
+        <property name="wheel" ref="wheel" />
+    </bean>
+
+    <bean id="wheel" class="pl.kodolamacz.spring.Wheel" scope="prototype" />
 
 
 </beans>
