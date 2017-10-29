@@ -1,6 +1,7 @@
 package pl.kodolamacz.spring.app;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import pl.kodolamacz.spring.dao.UserService;
 
 /**
@@ -10,11 +11,9 @@ public class Aplication {
 
     public static void main(String[] args) {
 
-        AnnotationConfigApplicationContext context =
-                new AnnotationConfigApplicationContext(Beans.class);
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
 
         Human human = context.getBean(Human.class);
-
 
         Leg leg = context.getBean(Leg.class);
 

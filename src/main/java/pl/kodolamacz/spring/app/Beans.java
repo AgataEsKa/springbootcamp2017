@@ -11,7 +11,6 @@ import org.springframework.context.annotation.ImportResource;
 @ComponentScan(value = "pl.kodolamacz.spring.app")
 // albo:
 //@ComponentScan // wtedy skanuje ten package i wszystkie wgłąb
-@ImportResource("classpath:context.xml")
 public class Beans {
 
 }

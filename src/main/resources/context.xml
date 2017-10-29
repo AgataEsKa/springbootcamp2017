@@ -11,6 +11,12 @@
         <!--<constructor-arg ref="userRepository" />-->
     <!--</bean>-->
 
+    <!--włącza przetwarzanie adnotacji-->
+    <!--<context:annotation-config/>-->
+    <!--<bean class="pl.kodolamacz.spring.app.Beans" />-->
+    <!--albo można zrobić inaczej:-->
+    <context:component-scan base-package="pl.kodolamacz.spring"/>
+
     <bean id="userService" class="pl.kodolamacz.spring.dao.UserService" autowire="byType" />
 
     <bean id="userRepository" class="pl.kodolamacz.spring.dao.UserRepository" />
