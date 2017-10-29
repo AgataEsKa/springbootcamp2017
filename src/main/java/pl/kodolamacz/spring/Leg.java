@@ -1,12 +1,17 @@
 package pl.kodolamacz.spring;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Created by acacko on 29.10.17
  */
 
+@Component
 public class Leg {
 
     private int fingerAmount;
+
+    public Leg(){}
 
     public Leg(int fingerAmount) {
         this.fingerAmount = fingerAmount;

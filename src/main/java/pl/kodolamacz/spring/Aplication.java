@@ -12,7 +12,7 @@ public class Aplication {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext(Beans.class);
 
-        Human human = context.getBean("getHuman", Human.class);
+        Human human = context.getBean(Human.class);
         Leg leg = context.getBean(Leg.class);
 
         System.out.println(human);
@@ -20,7 +20,7 @@ public class Aplication {
 
         System.out.println("leg == human.getLeg() = " + (leg == human.getLeg()));
 
-        Human unnormalHuman = context.getBean("getUnnormalHuman", Human.class);
+//        Human unnormalHuman = context.getBean("getUnnormalHuman", Human.class);
 
 
         context.close();
