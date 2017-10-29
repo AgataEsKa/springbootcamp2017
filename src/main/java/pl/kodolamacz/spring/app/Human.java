@@ -1,8 +1,10 @@
-package pl.kodolamacz.spring;
+package pl.kodolamacz.spring.app;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.util.Assert;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 /**
  * Created by acacko on 29.10.17
@@ -13,8 +15,20 @@ public class Human {
     @Autowired
     private Leg leg;
 
+
+
     public Human() {
         System.out.println("Bezparametrowy");
+    }
+
+    @PostConstruct
+    public void init() {
+        System.out.println("ZARAZ PO POWOŁANIU BEANA");
+    }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("Bean umiera");
     }
 
 //    public Human(Leg leg) {

@@ -1,4 +1,4 @@
-package pl.kodolamacz.spring;
+package pl.kodolamacz.spring.app;
 
 import org.springframework.stereotype.Component;
 
