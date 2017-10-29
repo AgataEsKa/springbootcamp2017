@@ -1,7 +1,6 @@
 package pl.kodolamacz.spring.app;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import pl.kodolamacz.spring.dao.DaoConfiguration;
 import pl.kodolamacz.spring.dao.UserService;
 
 /**
@@ -27,6 +26,7 @@ public class Aplication {
 //        Human unnormalHuman = context.getBean("getUnnormalHuman", Human.class);
 
         UserService userService = context.getBean(UserService.class);
+        System.out.println("userService = " + userService);
 
         context.close();
 

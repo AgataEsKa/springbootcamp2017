@@ -7,13 +7,14 @@ import org.springframework.stereotype.Service;
  * Created by acacko on 29.10.17
  */
 
-@Service
+
 public class UserService {
 
 
     private UserRepository userRepository;
 
-    @Autowired
+    public UserService(){}
+
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
@@ -22,6 +23,11 @@ public class UserService {
         System.out.println(userRepository);
     }
 
+    public UserRepository getUserRepository() {
+        return userRepository;
+    }
 
-
+    public void setUserRepository(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 }

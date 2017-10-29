@@ -2,8 +2,7 @@ package pl.kodolamacz.spring.app;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-import pl.kodolamacz.spring.dao.DaoConfiguration;
+import org.springframework.context.annotation.ImportResource;
 
 /**
  * Created by acacko on 29.10.17
@@ -12,7 +11,7 @@ import pl.kodolamacz.spring.dao.DaoConfiguration;
 @ComponentScan(value = "pl.kodolamacz.spring.app")
 // albo:
 //@ComponentScan // wtedy skanuje ten package i wszystkie wgłąb
-@Import(DaoConfiguration.class)
+@ImportResource("classpath:context.xml")
 public class Beans {
 
 }
